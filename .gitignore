@@ -1,0 +1,12 @@
+node_modules/
+app/index.html
+dist
+.tmp
+.sass-cache
+app/bower_components
+bower_components/
+.DS_Store
+app/modules/common/services/config.js
+config/environments/local.json
+.project
+.tern-project
