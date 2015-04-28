@@ -1,0 +1,21 @@
+<div gn-navigation-directive></div>
+<br />
+<br />
+<br />
+<div ui-view></div>
+<br />
+<div class="s md-highlight">
+    <table class="table">
+        <tbody>
+            <tr ng-class="{'success': !hasError, 'danger': hasError}">
+                <td>Module: {{moduleName}}</td>
+            </tr>
+            <tr ng-class="{'success': !hasError, 'danger': hasError}">
+                <td>State: {{stateName}}</td>
+            </tr>
+            <tr ng-class="{'success': !hasError, 'danger': hasError}">
+                <td>Status: {{status}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

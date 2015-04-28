@@ -1,5 +1,4 @@
 node_modules/
-app/index.html
 dist
 .tmp
 .sass-cache
@@ -10,3 +9,5 @@ app/modules/common/services/config.js
 config/environments/local.json
 .project
 .tern-project
+.tscache/
+typings/

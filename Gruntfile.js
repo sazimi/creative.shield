@@ -7,7 +7,7 @@
 // use this if you want to recursively match all subfolders:
 // 'test/spec/**/*.js'
 
-module.exports = function (grunt) {
+module.exports = function(grunt) {
 
   // Load grunt tasks automatically
   require('load-grunt-tasks')(grunt);
@@ -22,14 +22,26 @@ module.exports = function (grunt) {
   var modRewrite = require('connect-modrewrite');
 
   // To include javascripts automatically
-  grunt.loadNpmTasks('grunt-include-source');
+  //grunt.loadNpmTasks('grunt-include-source');
 
   // To uglify js without breaking AngularJS dependencies
   grunt.loadNpmTasks('grunt-ng-annotate');
 
+  grunt.loadNpmTasks("grunt-ts");
+
 
   // Define the configuration for all the tasks
   grunt.initConfig({
+
+    // Typescript
+    ts: {
+      default: {
+        src: ["**/*.ts", "!node_modules/**/*.ts", "!<%= yeoman.app %>/bower_components/**/*.ts", "!typings/**/*.ts"],
+        options: {
+          watch: true
+        }
+      }
+    },
 
     // Project settings
     yeoman: {
@@ -64,9 +76,12 @@ module.exports = function (grunt) {
           livereload: true
         }
       },
-      includeSource: {
-        files: ['<%= yeoman.app %>/index.tpl.html'],
-        tasks: ['includeSource:server']
+      ts: {
+        files: ['<%= yeoman.app %>/**/{,*/}*.ts'],
+        tasks: ['ts'],
+        options: {
+          livereload: true
+        }
       },
       compass: {
         files: ['<%= yeoman.app %>/assets/styles/**/*.scss'],
@@ -94,20 +109,20 @@ module.exports = function (grunt) {
         // Change this to '0.0.0.0' to access the server from outside.
         hostname: '0.0.0.0',
         livereload: 35729,
-        middleware: function (connect, options) {
+        middleware: function(connect, options) {
           var optBase = (typeof options.base === 'string') ? [options.base] : options.base;
           return [require('connect-modrewrite')(['!(\\..+)$ /index.html [L]'])].concat(
-            optBase.map(function (path) {
+            optBase.map(function(path) {
               return connect.static(path);
             }));
         }
       },
       livereload: {
         options: {
-          middleware: function (connect, options) {
+          middleware: function(connect, options) {
             var optBase = (typeof options.base === 'string') ? [options.base] : options.base;
             return [require('connect-modrewrite')(['!(\\..+)$ /index.html [L]'])].concat(
-              optBase.map(function (path) {
+              optBase.map(function(path) {
                 return connect.static(path);
               }));
           },
@@ -151,7 +166,6 @@ module.exports = function (grunt) {
           src: [
             '.tmp',
             '<%= yeoman.dist %>/*',
-            '<%= yeoman.app %>/index.html',
             '!<%= yeoman.dist %>/.git*'
           ]
         }]
@@ -160,8 +174,7 @@ module.exports = function (grunt) {
         files: [{
           dot: true,
           src: [
-            '.tmp',
-            '<%= yeoman.app %>/index.html'
+            '.tmp'
           ]
         }]
       }
@@ -402,22 +415,22 @@ module.exports = function (grunt) {
     },
   });
 
-  grunt.registerTask('serve', function (target) {
+  grunt.registerTask('serve', function(target) {
     if (target === 'dist') {
       return grunt.task.run(['build', 'connect:dist:keepalive']);
     }
     // grunt serve uses replace:development settings
     grunt.task.run([
       'clean:server',
-      'includeSource:server',
       'concurrent:server',
+      'ts',
       'autoprefixer',
       'connect:livereload',
       'watch'
     ]);
   });
 
-  grunt.registerTask('server', function () {
+  grunt.registerTask('server', function() {
     grunt.log.warn('The `server` task has been deprecated. Use `grunt serve` to start a server.');
     grunt.task.run(['serve']);
   });

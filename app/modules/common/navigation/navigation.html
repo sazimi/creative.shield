@@ -1,0 +1,29 @@
+<div class="scaffold">
+
+    <!-- navigation header -->
+    <div class="scaffold-bar scaffold-bar-default">
+        <div class="col-xs-12 flex">
+            <button
+            ng-click="navOpen = !navOpen"
+            class="btn btn-clear-brand flex-middle reset-padding-left">
+            <span class="nedicon-drag_small inline-space flex-middle"></span>
+            <span class="inline-space flex-middle">SHIELD</span>
+        </button>
+    </div>
+</div>
+
+<!-- Navigation content (menu items etc.) -->
+<div class="scaffold-view" ng-show="navOpen">
+    <div class="scaffold-content">
+        <ul class="nav nav-stacked nav-pills block-list">
+            <li ng-repeat="nav in items"
+            role="presentation"
+            ng-class="{'active': $state.includes({{nav.state}})}">
+                <a href ui-sref="{{nav.state}}" ng-click="$parent.navOpen = !$parent.navOpen">
+                    <span class="element">{{nav.title}}</span>
+                </a>
+            </li>
+        </ul>
+
+    </div>
+</div> 
