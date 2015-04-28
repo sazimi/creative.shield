@@ -1,3 +1,5 @@
+/// <reference path="../typings/tsd.d.ts" />
+/// <reference path="shield.ts" />
 var Shield;
 (function (Shield) {
     Shield.shield.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
@@ -22,4 +24,5 @@ var Shield;
         });
     }]);
 })(Shield || (Shield = {}));
+
 //# sourceMappingURL=states.js.map

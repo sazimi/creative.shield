@@ -2,7 +2,7 @@
 
 module Shield {
   export var shield = angular.module('shield', ['ui.router', 'shield.ppv', 'shield.mapper']);
-  console.log(123);
+  console.log(4);
 
   //run
 
@@ -21,7 +21,7 @@ module Shield {
 //       .state('main', {
 //         'abstract': true,
 //         template: '<ui-view />',
-//         onEnter: function(){
+//         onEnter: function()b{
 //               console.log("on Enter: main");
 //             }
 //         })
