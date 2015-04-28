@@ -2,7 +2,8 @@
   "name": "shield",
   "version": "0.0.0",
   "dependencies": {
-    "grunt-ts": "^4.0.1"
+    "grunt-ts": "^4.0.1",
+    "tsd": "^0.5.7"
   },
   "devDependencies": {
     "connect-modrewrite": "0.7.9",
