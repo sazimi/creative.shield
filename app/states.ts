@@ -6,28 +6,29 @@ module Shield{
 shield.config(['$stateProvider', '$urlRouterProvider',
 	($stateProvider: ng.ui.IStateProvider, $urlRouterProvider: ng.ui.IUrlRouterProvider) => {
 
-    $urlRouterProvider.otherwise('start');
+    $urlRouterProvider.otherwise('/');
     $stateProvider
-        .state('start', {
-            url: '/start',
-            template: "<a ui-sref='main.ppv.home'>ppv</a><br /> <a ui-sref='main.mapper.home'>mapper</a>",
+        .state('main', {
+          'abstract': true,
+          template: '<ui-view />',
+          onEnter: function(){
+                console.log("on Enter: main");
+              }
+        })
+        .state('main.shield', {
+            url: '/',
+            templateUrl: 'modules/common/first.html',
             onEnter: function(){
               console.log("on Enter: start");
+            },
+            controller: function($scope, $rootScope) {
+                $rootScope.hasError = false;
+                $rootScope.stateName = "main.shield";
+                $rootScope.status = !$rootScope.hasError;
+                $rootScope.moduleName = "Shield"; 
+                console.log('Main + Shield');
             }
             })
-      .state('main', {
-        'abstract': true,
-        template: '<ui-view />',
-        onEnter: function(){
-              console.log("on Enter: main");
-            }
-        })
-      .state('main.yek', {
-        template: 'Sherry',
-        onEnter: function(){
-              console.log("on Enter: yek");
-            }
-        })
       ;
     }]);
 }

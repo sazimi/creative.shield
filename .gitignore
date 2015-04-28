@@ -1,5 +1,4 @@
 node_modules/
-app/index.html
 dist
 .tmp
 .sass-cache

@@ -1,21 +1,34 @@
-var mapper;
-(function (mapper) {
-    mapper.mapper.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
-        $stateProvider.state('main.mapper', {
+var Mapper;
+(function (Mapper) {
+    Mapper.mapper.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
+        $stateProvider.state('main.shield.mapper', {
+            url: '/mapper',
             'abstract': true,
-            template: '<ui-view />',
-        }).state('main.mapper.home', {
-            url: '/mapper/home',
+            template: '<ui-view />'
+        }).state('main.shield.mapper.home', {
+            url: '/home',
             templateUrl: 'modules/mapper/views/channellist.html',
             onEnter: function () {
-                console.log("on Enter: main.mapper.home.before");
-                throw "not implemented exception!";
-                console.log("on Enter: main.mapper.home.after");
+                console.log("on Enter: main.shield.mapper.home.before");
+                console.log("on Enter: main.shield.mapper.home.after");
             },
-            controller: function ($scope) {
+            controller: function ($scope, $rootScope) {
+                $rootScope.hasError = false;
+                $rootScope.stateName = "main.shield.mapper.home";
+                $rootScope.status = !$rootScope.hasError;
+                $rootScope.moduleName = "Mapper";
                 console.log('mapper + home');
             }
+        }).state('main.shield.mapper.channels', {
+            url: '/channels',
+            template: 'Channels of Mapper'
+        }).state('main.shield.mapper.markets', {
+            url: '/markets',
+            template: 'markets of Mapper'
+        }).state('main.shield.mapper.markets.detail', {
+            url: '/detail',
+            template: 'details of markets of Mapper'
         });
     }]);
-})(mapper || (mapper = {}));
+})(Mapper || (Mapper = {}));
 //# sourceMappingURL=states.js.map

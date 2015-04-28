@@ -8,21 +8,35 @@ module ppv{
 
     // $urlRouterProvider.otherwise('ppv/client');
     $stateProvider
-    .state('main.ppv', {
+    .state('main.shield.ppv', {
         'abstract': true,
         template: '<ui-view />',
         })
-    .state('main.ppv.home', {
+    .state('main.shield.ppv.home', {
         url: '/ppv/home',
         templateUrl: 'modules/ppv/views/channellist.html',
         onEnter: function(){
-            console.log("on Enter: main.ppv.home");
+            console.log("on Enter: main.shield.ppv.home");
             },
-            controller: function($scope) {
+            controller: function($scope, $rootScope) {
+                $rootScope.hasError = true;
+                $rootScope.stateName = "main.shield.ppv.home";
+                $rootScope.status = !$rootScope.hasError;
+                $rootScope.moduleName = "PPV"; 
                 console.log('ppv + home');
-                        // $scope.passed = 'passed!';
-                    }
-                    })
-    ;
+            }
+        })
+    .state('main.shield.ppv.channels', {
+        url: '/channels',
+        templateUrl: 'Channels of ppv'
+        })
+    .state('main.shield.ppv.markets', {
+        url: '/markets',
+        templateUrl: 'markets of ppv'
+        })
+    .state('main.shield.ppv.markets.detail', {
+        url: '/detail',
+        templateUrl: 'details of markets of ppv'
+        });
     }]);
 }
