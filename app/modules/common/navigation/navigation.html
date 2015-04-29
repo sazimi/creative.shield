@@ -16,14 +16,28 @@
 <div class="scaffold-view" ng-show="navOpen">
     <div class="scaffold-content">
         <ul class="nav nav-stacked nav-pills block-list">
+            
             <li ng-repeat="nav in items"
             role="presentation"
             ng-class="{'active': $state.includes({{nav.state}})}">
                 <a href ui-sref="{{nav.state}}" ng-click="$parent.navOpen = !$parent.navOpen">
                     <span class="element">{{nav.title}}</span>
                 </a>
-            </li>
-        </ul>
+                
+                <ul class="nav nav-stacked nav-pills block-list">
+            
+                    <li ng-repeat="child in nav.children"
+                        role="presentation">
+                            <img src="demo/images/{{child.icon}}" class="avatar avatar-round avatar-lg" alt="Daniel - Karate Kid"/>
+                            <a href ui-sref="{{child.state}}" ng-click="$parent.$parent.navOpen = !$parent.$parent.navOpen">
+                                <span class="element">{{child.title}}</span>
+                            </a>
+                    </li>
+                    
+                </ul>
 
+            </li>
+            
+        </ul>
     </div>
 </div> 

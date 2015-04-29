@@ -9,15 +9,25 @@ module frontend {
         menu.state = "main.shield.frontend.home";
         menu.children = new Array<Common.Navigation>();
         menu.children.push(new Common.Navigation(
-            "Channel",
-            "main.shield.frontend.channels"
+            "Nima",
+            "main.shield.frontend.nima",
+            "nima-small.png"
             ));
         menu.children.push(new Common.Navigation(
-            "Market",
-            "main.shield.frontend.marktes",
-            "",
-            [ new Common.Navigation('market 1', "main.shield.frontend.markets.detail") ]
-            ));        
+            "Sherry",
+            "main.shield.frontend.sherry",
+            "sherry-small.jpeg"
+            )); 
+        menu.children.push(new Common.Navigation(
+            "Emil",
+            "main.shield.frontend.emil",
+            "emil-small.jpeg"
+            ));
+        menu.children.push(new Common.Navigation(
+            "Jens",
+            "main.shield.frontend.jens",
+            "jens-small.png"
+            ));         
         navigationServices.setItem(menu)
     }]);
 

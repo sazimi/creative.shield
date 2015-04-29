@@ -9,7 +9,10 @@ var Common;
                 templateUrl: '/modules/common/navigation/navigation.html',
                 link: function ($scope, iElement, iAttribute) {
                     $scope.$watch(navigationServices.getItems(), function (newValue, oldValue) {
-                        $scope.items = navigationServices.getItems();
+                        var result = navigationServices.getItems();
+                        if (angular.isDefined(result)) {
+                            $scope.items = result;
+                        }
                     });
                 }
             };

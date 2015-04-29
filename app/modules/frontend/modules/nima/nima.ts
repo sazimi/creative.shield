@@ -4,6 +4,6 @@
 module Nima {
     export var nima = angular.module('frontend.nima', []);
 
-    // Sherry's factories
+    // Nima's factories
     nima.factory('nimaServices', frontend.nima.services.nimaServices);
 }
