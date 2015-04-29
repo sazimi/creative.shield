@@ -222,9 +222,6 @@ module.exports = function(grunt) {
             dist: {
                 files: {
                     src: [
-                        //'<%= yeoman.dist %>/scripts/**/*.js',
-                        //'<%= yeoman.dist %>/assets/styles/**/*.css',
-                        //'<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
                         '<%= yeoman.dist %>/styles/fonts/*'
                     ]
                 }
@@ -277,14 +274,22 @@ module.exports = function(grunt) {
             core: {
                 files: {
                     '<%= yeoman.app %>/js/shield.core.js': [
-                      '<%= yeoman.app %>/js/shield.js',
-                      '<%= yeoman.app %>/js/states.js',
-                      '<%= yeoman.app %>/js/modules/common/{,*/}*.js'
-                      ],
+                        '<%= yeoman.app %>/js/shield.js',
+                        '<%= yeoman.app %>/js/states.js',
+                        '<%= yeoman.app %>/js/modules/common/{,*/}*.js'
+                    ],
                     '<%= yeoman.app %>/js/modules/frontend/modules/frontend.core.js': ['<%= yeoman.app %>/js/modules/frontend/*.js'],
                     '<%= yeoman.app %>/js/modules/frontend/modules/frontend.modules.js': ['<%= yeoman.app %>/js/modules/frontend/modules/**/*.js'],
-                    '<%= yeoman.app %>/js/modules//backend/modules/backend.core.js': ['<%= yeoman.app %>/js/modules/backend/*.js'],
-                    '<%= yeoman.app %>/js/modules//backend/modules/backend.modules.js': ['<%= yeoman.app %>/js/modules/backend/modules/**/*.js'],
+                    '<%= yeoman.app %>/js/modules/backend/modules/backend.core.js': ['<%= yeoman.app %>/js/modules/backend/*.js'],
+                    '<%= yeoman.app %>/js/modules/backend/modules/backend.modules.js': ['<%= yeoman.app %>/js/modules/backend/modules/**/*.js'],
+                    '<%= yeoman.app %>/js/modules/boss/modules/boss.core.js': ['<%= yeoman.app %>/js/modules/boss/*.js'],
+                    '<%= yeoman.app %>/js/modules/boss/modules/boss.modules.js': ['<%= yeoman.app %>/js/modules/boss/modules/**/*.js'],
+                    '<%= yeoman.app %>/js/modules/cute/modules/cute.core.js': ['<%= yeoman.app %>/js/modules/cute/*.js'],
+                    '<%= yeoman.app %>/js/modules/cute/modules/cute.modules.js': ['<%= yeoman.app %>/js/modules/cute/modules/**/*.js'],
+                    '<%= yeoman.app %>/js/modules/qa/modules/qa.core.js': ['<%= yeoman.app %>/js/modules/qa/*.js'],
+                    '<%= yeoman.app %>/js/modules/qa/modules/qa.modules.js': ['<%= yeoman.app %>/js/modules/qa/modules/**/*.js'],
+                    '<%= yeoman.app %>/js/modules/supremeleader/modules/supremeleader.core.js': ['<%= yeoman.app %>/js/modules/supremeleader/*.js'],
+                    '<%= yeoman.app %>/js/modules/supremeleader/modules/supremeleader.modules.js': ['<%= yeoman.app %>/js/modules/supremeleader/modules/**/*.js'],
                 },
             },
         },
