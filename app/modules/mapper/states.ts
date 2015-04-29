@@ -6,8 +6,6 @@ module Mapper{
     mapper.config(['$stateProvider', '$urlRouterProvider', 
         ($stateProvider: ng.ui.IStateProvider, $urlRouterProvider: ng.ui.IUrlRouterProvider) => {
 
-    // $urlRouterProvider.otherwise('ppv/client');
-
     $stateProvider
     .state('main.shield.mapper', {
         url: '/mapper',
