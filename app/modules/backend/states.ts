@@ -62,28 +62,28 @@ module backend{
     })
     .state('main.shield.backend.travis', {
         url: '/travis',
-        template: 'Hi, This is {{name}}!',
+        template: 'Hi, This is {{name}}! <br /> <img src="demo/images/travis.png" />',
         controller: function($scope, travisServices) {
             $scope.name = travisServices.getName();
         }
     })
     .state('main.shield.backend.kim', {
         url: '/kim',
-        template: 'Hi, This is {{name}}!',
+        template: 'Hi, This is {{name}}! <br /> <img src="demo/images/kim.png" />',
         controller: function($scope, kimServices) {
             $scope.name = kimServices.getName();
         }
     })
     .state('main.shield.backend.hristo', {
         url: '/hristo',
-        template: 'Hi, This is {{name}}!',
+        template: 'Hi, This is {{name}}! <br /> <img src="demo/images/hristo.png" />',
         controller: function($scope, hristoServices) {
             $scope.name = hristoServices.getName();
         }
     })
     .state('main.shield.backend.sebastian', {
         url: '/sebastian',
-        template: 'Hi, This is {{name}}!',
+        template: 'Hi, This is {{name}}! <br /> <img src="demo/images/sebastian.png" />',
         controller: function($scope, sebastianServices) {
             $scope.name = sebastianServices.getName();
         }

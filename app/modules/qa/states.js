@@ -37,13 +37,13 @@ var qa;
             }
         }).state('main.shield.qa.helle', {
             url: '/helle',
-            template: 'Hi, This is {{name}}!',
+            template: 'Hi, This is {{name}}! <br /> <img src="demo/images/helle.png" />',
             controller: function ($scope, helleServices) {
                 $scope.name = helleServices.getName();
             }
         }).state('main.shield.qa.jesper', {
             url: '/jesper',
-            template: 'Hi, This is {{name}}!',
+            template: 'Hi, This is {{name}}! <br /> <img src="demo/images/jesper.png" />',
             controller: function ($scope, jesperServices) {
                 $scope.name = jesperServices.getName();
             }
