@@ -50,31 +50,52 @@ var frontend;
                 $rootScope.stateName = "main.shield.frontend.home";
                 $rootScope.status = !$rootScope.hasError;
                 $rootScope.moduleName = "frontend";
+                $rootScope.url = "/fronend/home";
                 console.log('frontend + home');
             }
         }).state('main.shield.frontend.sherry', {
             url: '/sherry',
-            template: 'Hi, This is {{name}}! <br /> <img src="demo/images/sherry.png" />',
-            controller: function ($scope, sherryServices) {
+            template: 'Hi, This is {{name}}! <br /> <img src="demo/images/sherry.jpeg" />',
+            controller: function ($scope, $rootScope, sherryServices) {
                 $scope.name = sherryServices.getName();
+                $rootScope.hasError = false;
+                $rootScope.stateName = "main.shield.frontend.sherry";
+                $rootScope.status = !$rootScope.hasError;
+                $rootScope.moduleName = "frontend";
+                $rootScope.url = "/frontend/sherry";
             }
         }).state('main.shield.frontend.nima', {
             url: '/nima',
             template: 'Hi, This is {{name}}! <br /> <img src="demo/images/nima.png" />',
-            controller: function ($scope, nimaServices) {
+            controller: function ($scope, $rootScope, nimaServices) {
                 $scope.name = nimaServices.getName();
+                $rootScope.hasError = false;
+                $rootScope.stateName = "main.shield.frontend.nima";
+                $rootScope.status = !$rootScope.hasError;
+                $rootScope.moduleName = "frontend";
+                $rootScope.url = "/frontend/nima";
             }
         }).state('main.shield.frontend.emil', {
             url: '/emil',
-            template: 'Hi, This is {{name}}! <br /> <img src="demo/images/emil.png" />',
-            controller: function ($scope, emilServices) {
+            template: 'Hi, This is {{name}}! <br /> <img src="demo/images/emil.jpeg" />',
+            controller: function ($scope, $rootScope, emilServices) {
                 $scope.name = emilServices.getName();
+                $rootScope.hasError = false;
+                $rootScope.stateName = "main.shield.frontend.emil";
+                $rootScope.status = !$rootScope.hasError;
+                $rootScope.moduleName = "frontend";
+                $rootScope.url = "/frontend/emil";
             }
         }).state('main.shield.frontend.jens', {
             url: '/jens',
             template: 'Hi, This is {{name}}! <br /> <img src="demo/images/jens.png" />',
-            controller: function ($scope, jensServices) {
+            controller: function ($scope, $rootScope, jensServices) {
                 $scope.name = jensServices.getName();
+                $rootScope.hasError = false;
+                $rootScope.stateName = "main.shield.frontend.jens";
+                $rootScope.status = !$rootScope.hasError;
+                $rootScope.moduleName = "frontend";
+                $rootScope.url = "/frontend/jens";
             }
         });
     }]);

@@ -12,3 +12,4 @@ config/environments/local.json
 .tscache/
 typings/
 app/**/*.map
+app/js

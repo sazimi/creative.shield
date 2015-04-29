@@ -35,16 +35,22 @@ module supremeleader{
                         $rootScope.hasError = true;
                         $rootScope.stateName = "main.shield.supremeleader.home";
                         $rootScope.status = !$rootScope.hasError;
-                        $rootScope.moduleName = "supremeleader"; 
+                        $rootScope.moduleName = "supremeleader";
+                        $rootScope.url = "/supremeleader/home";
                         console.log('supremeleader + home');
                     }
             })
             .state('main.shield.supremeleader.jonatan', {
                 url: '/jonatan',
-                template: 'Hi, This is {{name}}! <br /> <img src="demo/images/jonatan.png" />',
-                controller: function($scope, jonatanServices) {
+                template: 'Hi, This is {{name}}! <br /> <img src="demo/images/jonatan.jpeg" />',
+                controller: function($scope, $rootScope, jonatanServices) {
                     $scope.name = jonatanServices.getName();
-                }
+                    $rootScope.hasError = true;
+                    $rootScope.stateName = "main.shield.supremeleader.jonatan";
+                    $rootScope.status = !$rootScope.hasError;
+                    $rootScope.moduleName = "Supreme Leader";
+                    $rootScope.url = "/supremeleader/jonatan"
+        }
             });
     }]);
 }

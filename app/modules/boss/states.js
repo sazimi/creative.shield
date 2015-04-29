@@ -26,7 +26,8 @@ var boss;
                 $rootScope.hasError = true;
                 $rootScope.stateName = "main.shield.boss.home";
                 $rootScope.status = !$rootScope.hasError;
-                $rootScope.moduleName = "boss";
+                $rootScope.moduleName = "Boss";
+                $rootScope.url = "/boss/home";
                 console.log('boss + home');
             }
         }).state('main.shield.boss.morten', {
