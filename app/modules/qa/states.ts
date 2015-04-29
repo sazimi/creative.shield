@@ -49,15 +49,25 @@ module qa{
     .state('main.shield.qa.helle', {
         url: '/helle',
         template: 'Hi, This is {{name}}! <br /> <img src="demo/images/helle.png" />',
-        controller: function($scope, helleServices) {
+        controller: function($scope, $rootScope, helleServices) {
             $scope.name = helleServices.getName();
+            $rootScope.hasError = false;
+            $rootScope.stateName = "main.shield.qa.helle";
+            $rootScope.status = !$rootScope.hasError;
+            $rootScope.moduleName = "qa";
+            $rootScope.url = "/qa/helle"
         }
     })
     .state('main.shield.qa.jesper', {
         url: '/jesper',
         template: 'Hi, This is {{name}}! <br /> <img src="demo/images/jesper.png" />',
-        controller: function($scope, jesperServices) {
+        controller: function($scope, $rootScope, jesperServices) {
             $scope.name = jesperServices.getName();
+            $rootScope.hasError = false;
+            $rootScope.stateName = "main.shield.qa.jesper";
+            $rootScope.status = !$rootScope.hasError;
+            $rootScope.moduleName = "qa";
+            $rootScope.url = "/qa/jesper"
         }
     })
     ;
