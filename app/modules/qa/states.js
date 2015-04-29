@@ -33,6 +33,7 @@ var qa;
                 $rootScope.stateName = "main.shield.qa.home";
                 $rootScope.status = !$rootScope.hasError;
                 $rootScope.moduleName = "qa";
+                $rootScope.url = "/qa/home";
                 console.log('qa + home');
             }
         }).state('main.shield.qa.helle', {

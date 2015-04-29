@@ -50,11 +50,12 @@ var frontend;
                 $rootScope.stateName = "main.shield.frontend.home";
                 $rootScope.status = !$rootScope.hasError;
                 $rootScope.moduleName = "frontend";
+                $rootScope.url = "/fronend/home";
                 console.log('frontend + home');
             }
         }).state('main.shield.frontend.sherry', {
             url: '/sherry',
-            template: 'Hi, This is {{name}}! <br /> <img src="demo/images/sherry.png" />',
+            template: 'Hi, This is {{name}}! <br /> <img src="demo/images/sherry.jpeg" />',
             controller: function ($scope, $rootScope, sherryServices) {
                 $scope.name = sherryServices.getName();
                 $rootScope.hasError = false;
@@ -76,7 +77,7 @@ var frontend;
             }
         }).state('main.shield.frontend.emil', {
             url: '/emil',
-            template: 'Hi, This is {{name}}! <br /> <img src="demo/images/emil.png" />',
+            template: 'Hi, This is {{name}}! <br /> <img src="demo/images/emil.jpeg" />',
             controller: function ($scope, $rootScope, emilServices) {
                 $scope.name = emilServices.getName();
                 $rootScope.hasError = false;

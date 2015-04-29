@@ -22,43 +22,37 @@ shield.config(['$stateProvider', '$urlRouterProvider',
                       {
                         name: "boss",
                         files: [
-                          'modules/boss/boss.js',
-                          'modules/boss/states.js'
+                          'js/modules/boss/boss.core.js',
                           ]
                       },
                       {
                         name: "supremeleader",
                         files: [
-                          'modules/supremeleader/supremeleader.js',
-                          'modules/supremeleader/states.js'
+                          'js/modules/supremeleader/supremeleader.core.js',
                           ]
                       },
                       {
                         name: "qa",
                         files: [
-                          'modules/qa/qa.js',
-                          'modules/qa/states.js'
+                          'js/modules/qa/qa.core.js',
                           ]
                       },
                       {
                         name: "frontend",
                         files: [
-                          'modules/frontend/frontend.js',
-                          'modules/frontend/states.js'
+                          'js/modules/frontend/frontend.core.js',
                           ]
                       },
                       {
                         name: "backend",
                         files: [
-                          'modules/backend/backend.js',
-                          'modules/backend/states.js'
+                          'js/modules/backend/backend.core.js',
                           ]
                       },
                       {
                         name: "cute",
                         files: [
-                          'modules/cute/cute.js',
-                          'modules/cute/states.js'
+                          'js/modules/cute/cute.core.js',
                           ]
                       }
                     ]

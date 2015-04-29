@@ -42,7 +42,8 @@ module qa{
                 $rootScope.hasError = true;
                 $rootScope.stateName = "main.shield.qa.home";
                 $rootScope.status = !$rootScope.hasError;
-                $rootScope.moduleName = "qa"; 
+                $rootScope.moduleName = "qa";
+                $rootScope.url = "/qa/home"; 
                 console.log('qa + home');
             }
     })
