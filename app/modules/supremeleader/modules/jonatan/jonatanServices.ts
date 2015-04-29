@@ -8,7 +8,7 @@ module frontend.jonatan.services {
         constructor(){}
 
         public getName(): string {
-            return 'Jonatan Trolle';
+            return 'Jonatan Nissen';
         }
     }
 }

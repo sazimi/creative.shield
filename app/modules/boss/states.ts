@@ -12,7 +12,7 @@ module boss{
         template: '<ui-view />',
         url: 'boss',
         resolve: {
-              sherry: function($ocLazyLoad) {
+              boss: function($ocLazyLoad) {
                   return $ocLazyLoad.load(
                   [{
                     name: "boss.morten",
@@ -39,18 +39,11 @@ module boss{
                 console.log('boss + home');
             }
     })
-    .state('main.shield.boss.sherry', {
-        url: '/sherry',
-        template: 'Hi, This is {{name}}!',
-        controller: function($scope, sherryServices) {
-            $scope.name = sherryServices.getName();
-        }
-    })
-    .state('main.shield.boss.nima', {
-        url: '/nima',
-        template: 'Hi, This is {{name}}!',
-        controller: function($scope, nimaServices) {
-            $scope.name = nimaServices.getName();
+    .state('main.shield.boss.morten', {
+        url: '/morten',
+        template: 'Hi, This is {{name}}! <br /> <img src="demo/images/morten.png" />',
+        controller: function($scope, mortenServices) {
+            $scope.name = mortenServices.getName();
         }
     })
     ;

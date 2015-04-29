@@ -10,8 +10,8 @@ var cute;
                     return $ocLazyLoad.load([{
                         name: "cute.miglena",
                         files: [
-                            'modules/cute/modules/alexandra/alexandraServices.js',
-                            'modules/cute/modules/alexandra/alexandra.js'
+                            'modules/cute/modules/miglena/miglenaServices.js',
+                            'modules/cute/modules/miglena/miglena.js'
                         ]
                     }, {
                         name: "cute.alexandra",
@@ -37,13 +37,13 @@ var cute;
             }
         }).state('main.shield.cute.miglena', {
             url: '/miglena',
-            template: 'Hi, This is {{name}}!',
+            template: 'Hi, This is {{name}}! <br /> <img src="demo/images/miglena.png" />',
             controller: function ($scope, miglenaServices) {
                 $scope.name = miglenaServices.getName();
             }
         }).state('main.shield.cute.alexandra', {
             url: '/alexandra',
-            template: 'Hi, This is {{name}}!',
+            template: 'Hi, This is {{name}}! <br /> <img src="demo/images/alexandra.png" />',
             controller: function ($scope, alexandraServices) {
                 $scope.name = alexandraServices.getName();
             }

@@ -28,7 +28,7 @@
             
                     <li ng-repeat="child in nav.children"
                         role="presentation">
-                            <img src="demo/images/{{child.icon}}" class="avatar avatar-round avatar-lg" alt="Daniel - Karate Kid"/>
+                            <img src="demo/images/{{child.icon}} " class="avatar avatar-round avatar-lg" alt="Daniel - Karate Kid"/>
                             <a href ui-sref="{{child.state}}" ng-click="$parent.$parent.navOpen = !$parent.$parent.navOpen">
                                 <span class="element">{{child.title}}</span>
                             </a>

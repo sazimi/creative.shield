@@ -11,7 +11,7 @@ var frontend;
                 function JonatanServices() {
                 }
                 JonatanServices.prototype.getName = function () {
-                    return 'Jonatan Trolle';
+                    return 'Jonatan Nissen';
                 };
                 return JonatanServices;
             })();
