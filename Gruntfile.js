@@ -291,7 +291,10 @@ module.exports = function(grunt) {
                     '<%= yeoman.app %>/js/modules/cute/modules/cute.modules.js': ['<%= yeoman.app %>/js/modules/cute/modules/**/*.js'],
                     '<%= yeoman.app %>/js/modules/qa/qa.core.js': ['<%= yeoman.app %>/js/modules/qa/*.js'],
                     '<%= yeoman.app %>/js/modules/qa/modules/qa.modules.js': ['<%= yeoman.app %>/js/modules/qa/modules/**/*.js'],
-                    '<%= yeoman.app %>/js/modules/supremeleader/supremeleader.core.js': ['<%= yeoman.app %>/js/modules/supremeleader/*.js'],
+                    '<%= yeoman.app %>/js/modules/supremeleader/supremeleader.core.js': [
+                        '<%= yeoman.app %>/js/modules/supremeleader/supremeleader.js',
+                        '<%= yeoman.app %>/js/modules/supremeleader/states.js',
+                    ],
                     '<%= yeoman.app %>/js/modules/supremeleader/modules/supremeleader.modules.js': ['<%= yeoman.app %>/js/modules/supremeleader/modules/**/*.js'],
                 },
             },

@@ -10,27 +10,14 @@ var backend;
                     return $ocLazyLoad.load([{
                         name: "backend.kim",
                         files: [
-                            'modules/backend/modules/kim/kimServices.js',
-                            'modules/backend/modules/kim/kim.js'
+                            'js/modules/backend/modules/backend.modules.js',
                         ]
                     }, {
-                        name: "backend.travis",
-                        files: [
-                            'modules/backend/modules/travis/travisServices.js',
-                            'modules/backend/modules/travis/travis.js'
-                        ]
+                        name: "backend.travis"
                     }, {
-                        name: "backend.hristo",
-                        files: [
-                            'modules/backend/modules/hristo/hristoServices.js',
-                            'modules/backend/modules/hristo/hristo.js'
-                        ]
+                        name: "backend.hristo"
                     }, {
-                        name: "backend.sebastian",
-                        files: [
-                            'modules/backend/modules/sebastian/sebastianServices.js',
-                            'modules/backend/modules/sebastian/sebastian.js'
-                        ]
+                        name: "backend.sebastian"
                     }]);
                 }
             }
