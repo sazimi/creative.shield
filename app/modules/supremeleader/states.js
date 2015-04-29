@@ -32,7 +32,7 @@ var supremeleader;
             }
         }).state('main.shield.supremeleader.jonatan', {
             url: '/jonatan',
-            template: 'Hi, This is {{name}}! <br /> <img src="demo/images/jonatan.jpeg" />',
+            template: 'Hi, This is {{name}}! <br /> <img style="max-width: 500px" src="demo/images/jonatan.jpeg" />',
             controller: function ($scope, $rootScope, jonatanServices) {
                 $scope.name = jonatanServices.getName();
                 $rootScope.hasError = true;

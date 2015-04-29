@@ -158,7 +158,7 @@ module.exports = function(grunt) {
                     dot: true,
                     src: [
                         '.tmp',
-                        '<%= yeoman.app %>/**/*.js.map',
+                        // '<%= yeoman.app %>/**/*.js.map',
                         '<%= yeoman.app %>/**/*.d.ts',
                         '<%= yeoman.app %>/js'
                     ]
@@ -245,6 +245,8 @@ module.exports = function(grunt) {
                 dest: '<%= yeoman.app %>/js',
                 src: [
                     'modules/**/*.js',
+                    'modules/**/*.js.map',
+                    '*.js.map',
                     '*.js'
                 ]
             },
@@ -283,7 +285,10 @@ module.exports = function(grunt) {
                     ],
                     '<%= yeoman.app %>/js/modules/frontend/frontend.core.js': ['<%= yeoman.app %>/js/modules/frontend/*.js'],
                     '<%= yeoman.app %>/js/modules/frontend/modules/frontend.modules.js': ['<%= yeoman.app %>/js/modules/frontend/modules/**/*.js'],
-                    '<%= yeoman.app %>/js/modules/backend/backend.core.js': ['<%= yeoman.app %>/js/modules/backend/*.js'],
+                    '<%= yeoman.app %>/js/modules/backend/backend.core.js': [
+                        '<%= yeoman.app %>/js/modules/backend/backend.js',
+                        '<%= yeoman.app %>/js/modules/backend/states.js',
+                    ],
                     '<%= yeoman.app %>/js/modules/backend/modules/backend.modules.js': ['<%= yeoman.app %>/js/modules/backend/modules/**/*.js'],
                     '<%= yeoman.app %>/js/modules/boss/boss.core.js': ['<%= yeoman.app %>/js/modules/boss/*.js'],
                     '<%= yeoman.app %>/js/modules/boss/modules/boss.modules.js': ['<%= yeoman.app %>/js/modules/boss/modules/**/*.js'],

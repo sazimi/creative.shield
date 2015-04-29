@@ -38,7 +38,7 @@ var qa;
             }
         }).state('main.shield.qa.helle', {
             url: '/helle',
-            template: 'Hi, This is {{name}}! <br /> <img src="demo/images/helle.png" />',
+            template: 'Hi, This is {{name}}! <br /> <img style="max-width: 500px" src="demo/images/helle.png" />',
             controller: function ($scope, $rootScope, helleServices) {
                 $scope.name = helleServices.getName();
                 $rootScope.hasError = false;
@@ -49,7 +49,7 @@ var qa;
             }
         }).state('main.shield.qa.jesper', {
             url: '/jesper',
-            template: 'Hi, This is {{name}}! <br /> <img src="demo/images/jesper.png" />',
+            template: 'Hi, This is {{name}}! <br /> <img style="max-width: 500px" src="demo/images/jesper.png" />',
             controller: function ($scope, $rootScope, jesperServices) {
                 $scope.name = jesperServices.getName();
                 $rootScope.hasError = false;

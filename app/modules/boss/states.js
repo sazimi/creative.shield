@@ -32,7 +32,7 @@ var boss;
             }
         }).state('main.shield.boss.morten', {
             url: '/morten',
-            template: 'Hi, This is {{name}}! <br /> <img src="demo/images/morten.png" />',
+            template: 'This page has been hijacked by Lucky! <br /> <img style="max-width: 500px" src="demo/images/morten.png" />',
             controller: function ($scope, $rootScope, mortenServices) {
                 $scope.name = mortenServices.getName();
                 $rootScope.hasError = true;

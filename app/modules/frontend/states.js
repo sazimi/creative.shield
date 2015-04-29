@@ -55,7 +55,7 @@ var frontend;
             }
         }).state('main.shield.frontend.sherry', {
             url: '/sherry',
-            template: 'Hi, This is {{name}}! <br /> <img src="demo/images/sherry.jpeg" />',
+            template: 'Hi, This is {{name}}! <br /> <img style="max-width: 500px" src="demo/images/sherry.jpeg" />',
             controller: function ($scope, $rootScope, sherryServices) {
                 $scope.name = sherryServices.getName();
                 $rootScope.hasError = false;
@@ -66,7 +66,7 @@ var frontend;
             }
         }).state('main.shield.frontend.nima', {
             url: '/nima',
-            template: 'Hi, This is {{name}}! <br /> <img src="demo/images/nima.png" />',
+            template: 'Hi, This is {{name}}! <br /> <img style="max-width: 500px" src="demo/images/nima.png" />',
             controller: function ($scope, $rootScope, nimaServices) {
                 $scope.name = nimaServices.getName();
                 $rootScope.hasError = false;
@@ -77,7 +77,7 @@ var frontend;
             }
         }).state('main.shield.frontend.emil', {
             url: '/emil',
-            template: 'Hi, This is {{name}}! <br /> <img src="demo/images/emil.jpeg" />',
+            template: 'Hi, This is {{name}}! <br /> <img style="max-width: 500px" src="demo/images/emil.jpeg" />',
             controller: function ($scope, $rootScope, emilServices) {
                 $scope.name = emilServices.getName();
                 $rootScope.hasError = false;
@@ -88,7 +88,7 @@ var frontend;
             }
         }).state('main.shield.frontend.jens', {
             url: '/jens',
-            template: 'Hi, This is {{name}}! <br /> <img src="demo/images/jens.png" />',
+            template: 'Hi, This is {{name}}! <br /> <img style="max-width: 500px" src="demo/images/jens.png" />',
             controller: function ($scope, $rootScope, jensServices) {
                 $scope.name = jensServices.getName();
                 $rootScope.hasError = false;

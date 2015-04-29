@@ -49,7 +49,7 @@ module cute{
     })
     .state('main.shield.cute.miglena', {
         url: '/miglena',
-        template: 'Hi, This is {{name}}! <br /> <img src="demo/images/miglena.png" />',
+        template: 'Hi, This is {{name}}! <br /> <img style="max-width: 500px" src="demo/images/miglena.png" />',
         controller: function($scope, $rootScope, miglenaServices) {
             $scope.name = miglenaServices.getName();
             $rootScope.hasError = false;
@@ -61,7 +61,7 @@ module cute{
     })
     .state('main.shield.cute.alexandra', {
         url: '/alexandra',
-        template: 'Hi, This is {{name}}! <br /> <img src="demo/images/alexandra.png" />',
+        template: 'Hi, This is {{name}}! <br /> <img style="max-width: 500px" src="demo/images/alexandra.png" />',
         controller: function($scope, $rootScope, alexandraServices) {
             $scope.name = alexandraServices.getName();
             $rootScope.hasError = false;

@@ -17,17 +17,30 @@ module backend{
                   [{
                     name: "backend.kim",
                     files: [
-                        'js/modules/backend/modules/backend.modules.js',
-                        ]
+                        'modules/backend/modules/kim/kimServices.js',
+                        'modules/backend/modules/kim/kim.js'
+                    ]
                   },
                   {
-                    name: "backend.travis"
+                    name: "backend.travis",
+                    files: [
+                        'modules/backend/modules/travis/travisServices.js',
+                        'modules/backend/modules/travis/travis.js'
+                    ]
                   },
                   {
-                    name: "backend.hristo"
+                    name: "backend.hristo",
+                    files: [
+                        'modules/backend/modules/hristo/hristoServices.js',
+                        'modules/backend/modules/hristo/hristo.js'
+                    ]
                   },
                   {
-                    name: "backend.sebastian"
+                    name: "backend.sebastian",
+                    files: [
+                        'modules/backend/modules/sebastian/sebastianServices.js',
+                        'modules/backend/modules/sebastian/sebastian.js'
+                    ]
                   }]
                   )
                 }
@@ -50,7 +63,7 @@ module backend{
     })
     .state('main.shield.backend.travis', {
         url: '/travis',
-        template: 'Hi, This is {{name}}! <br /> <img src="demo/images/travis.jpeg" />',
+        template: 'Hi, This is {{name}}! <br /> <img style="max-width: 500px" src="demo/images/travis.jpeg" />',
         controller: function($scope, $rootScope, travisServices) {
             $scope.name = travisServices.getName();
             $rootScope.hasError = false;
@@ -62,7 +75,7 @@ module backend{
     })
     .state('main.shield.backend.kim', {
         url: '/kim',
-        template: 'Hi, This is {{name}}! <br /> <img src="demo/images/kim.jpeg" />',
+        template: 'Hi, This is {{name}}! <br /> <img style="max-width: 500px" src="demo/images/kim.jpeg" />',
         controller: function($scope, $rootScope, kimServices) {
             $scope.name = kimServices.getName();
             $rootScope.hasError = false;
@@ -74,7 +87,7 @@ module backend{
     })
     .state('main.shield.backend.hristo', {
         url: '/hristo',
-        template: 'Hi, This is {{name}}! <br /> <img src="demo/images/hristo.jpeg" />',
+        template: 'Hi, This is {{name}}! <br /> <img style="max-width: 500px" src="demo/images/hristo.jpeg" />',
         controller: function($scope, $rootScope, hristoServices) {
             $scope.name = hristoServices.getName();
             $rootScope.hasError = true;
@@ -86,7 +99,7 @@ module backend{
     })
     .state('main.shield.backend.sebastian', {
         url: '/sebastian',
-        template: 'Hi, This is {{name}}! <br /> <img src="demo/images/sebastian.jpeg" />',
+        template: 'Hi, This is {{name}}! <br /> <img style="max-width: 500px" src="demo/images/sebastian.jpeg" />',
         controller: function($scope, $rootScope, sebastianServices) {
             $scope.name = sebastianServices.getName();
             $rootScope.hasError = false;
