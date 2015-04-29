@@ -7,23 +7,60 @@ var Shield;
             template: '<ui-view />',
             onEnter: function () {
                 console.log("on Enter: main");
+            },
+            resolve: {
+                frontend: function ($ocLazyLoad) {
+                    return $ocLazyLoad.load([
+                        {
+                            name: "boss",
+                            files: [
+                                'modules/boss/boss.js',
+                                'modules/boss/states.js'
+                            ]
+                        },
+                        {
+                            name: "supremeleader",
+                            files: [
+                                'modules/supremeleader/supremeleader.js',
+                                'modules/supremeleader/states.js'
+                            ]
+                        },
+                        {
+                            name: "qa",
+                            files: [
+                                'modules/qa/qa.js',
+                                'modules/qa/states.js'
+                            ]
+                        },
+                        {
+                            name: "frontend",
+                            files: [
+                                'modules/frontend/frontend.js',
+                                'modules/frontend/states.js'
+                            ]
+                        },
+                        {
+                            name: "backend",
+                            files: [
+                                'modules/backend/backend.js',
+                                'modules/backend/states.js'
+                            ]
+                        },
+                        {
+                            name: "cute",
+                            files: [
+                                'modules/cute/cute.js',
+                                'modules/cute/states.js'
+                            ]
+                        }
+                    ]);
+                }
             }
         }).state('main.shield', {
             url: '/',
             templateUrl: 'modules/common/first.html',
             onEnter: function () {
                 console.log("on Enter: start");
-            },
-            resolve: {
-                frontend: function ($ocLazyLoad) {
-                    return $ocLazyLoad.load({
-                        name: "frontend",
-                        files: [
-                            'modules/frontend/frontend.js',
-                            'modules/frontend/states.js'
-                        ]
-                    });
-                }
             },
             controller: function ($scope, $rootScope, $state) {
                 $scope.nima = function () {

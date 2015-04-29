@@ -1,7 +1,7 @@
 /// <reference path="../typings/tsd.d.ts" />
 
 module Shield {
-  export var shield = angular.module('shield', ['ui.router', 'shield.common', 'shield.mapper', 'oc.lazyLoad']);
+  export var shield = angular.module('shield', ['ui.router', 'shield.common', 'oc.lazyLoad']);
 
   shield.run(['$rootScope', ($rootScope) => {
       $rootScope.navOpen = false;
