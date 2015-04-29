@@ -23,7 +23,6 @@
 </head>
 
 <body ng-class="{'login-class': isItLoginPage, 'development': isDevelopment}" ng-cloak>
-    {{test}}
     <div ui-view class="scaffold"></div>
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
@@ -39,12 +38,15 @@
     <script src="bower_components/angular-animate/angular-animate.js"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="bower_components/oclazyload/dist/oclazyload.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
+    <!-- <script src="modules/ppv/ppv.js"></script>
+    <script src="modules/ppv/states.js"></script>-->
     <script src="shield.js"></script>
     <script src="states.js"></script>
-    <script src="modules/ppv/ppv.js"></script>
-    <script src="modules/ppv/states.js"></script>
+    
+    
     <!-- <script src="modules/mapper/mapperController.js"></script> -->
     <script src="modules/mapper/mapper.js"></script>
     <script src="modules/mapper/states.js"></script>
@@ -52,7 +54,7 @@
     <script src="modules/common/navigation/navigationServices.js"></script>
     <script src="modules/common/navigation/navigationDirective.js"></script>
     <script src="modules/common/common.js"></script>
-    
+
 </body>
 
 </html>

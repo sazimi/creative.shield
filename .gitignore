@@ -11,3 +11,4 @@ config/environments/local.json
 .tern-project
 .tscache/
 typings/
+app/**/*.map
