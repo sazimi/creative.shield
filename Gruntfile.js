@@ -275,8 +275,11 @@ module.exports = function(grunt) {
                 files: {
                     '<%= yeoman.app %>/js/shield.core.js': [
                         '<%= yeoman.app %>/js/shield.js',
-                        '<%= yeoman.app %>/js/states.js',
-                        '<%= yeoman.app %>/js/modules/common/{,*/}*.js'
+                        '<%= yeoman.app %>/js/states.js'
+                    ],
+                    '<%= yeoman.app %>/js/modules/common/common.core.js': [
+                        '<%= yeoman.app %>/js/modules/common/navigation/*.js',
+                        '<%= yeoman.app %>/js/modules/common/*.js'
                     ],
                     '<%= yeoman.app %>/js/modules/frontend/modules/frontend.core.js': ['<%= yeoman.app %>/js/modules/frontend/*.js'],
                     '<%= yeoman.app %>/js/modules/frontend/modules/frontend.modules.js': ['<%= yeoman.app %>/js/modules/frontend/modules/**/*.js'],
