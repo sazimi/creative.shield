@@ -1,7 +1,7 @@
 /// <reference path="../../../typings/tsd.d.ts" />
 
 module boss {
-    export var boss = angular.module('boss', ['shield']);
+    export var boss = angular.module('boss', ['shield',]);
 
     boss.run(['navigationServices', (navigationServices) => {
         var menu = new Common.Navigation();

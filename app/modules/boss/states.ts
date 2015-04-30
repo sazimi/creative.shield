@@ -3,7 +3,7 @@
 
 module boss{
 
-    boss.config(['$stateProvider', '$urlRouterProvider', 
+    boss.config(['$stateProvider', '$urlRouterProvider',
         ($stateProvider: ng.ui.IStateProvider, $urlRouterProvider: ng.ui.IUrlRouterProvider) => {
 
     $stateProvider
@@ -35,7 +35,7 @@ module boss{
                 $rootScope.hasError = true;
                 $rootScope.stateName = "main.shield.boss.home";
                 $rootScope.status = !$rootScope.hasError;
-                $rootScope.moduleName = "Boss"; 
+                $rootScope.moduleName = "Boss";
                 $rootScope.url = "/boss/home";
                 console.log('boss + home');
             }

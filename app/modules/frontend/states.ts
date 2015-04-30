@@ -3,7 +3,7 @@
 
 module frontend{
 
-    frontend.config(['$stateProvider', '$urlRouterProvider', 
+    frontend.config(['$stateProvider', '$urlRouterProvider',
         ($stateProvider: ng.ui.IStateProvider, $urlRouterProvider: ng.ui.IUrlRouterProvider) => {
 
     $stateProvider
@@ -55,10 +55,10 @@ module frontend{
             console.log("on Enter: main.shield.frontend.home");
             },
             controller: function($scope, $rootScope) {
-                $rootScope.hasError = true;
+                $rootScope.hasError = false;
                 $rootScope.stateName = "main.shield.frontend.home";
                 $rootScope.status = !$rootScope.hasError;
-                $rootScope.moduleName = "frontend"; 
+                $rootScope.moduleName = "frontend";
                 $rootScope.url = "/fronend/home";
                 console.log('frontend + home');
             }

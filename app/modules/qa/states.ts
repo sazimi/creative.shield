@@ -3,7 +3,7 @@
 
 module qa{
 
-    qa.config(['$stateProvider', '$urlRouterProvider', 
+    qa.config(['$stateProvider', '$urlRouterProvider',
         ($stateProvider: ng.ui.IStateProvider, $urlRouterProvider: ng.ui.IUrlRouterProvider) => {
 
     $stateProvider
@@ -39,11 +39,11 @@ module qa{
             console.log("on Enter: main.shield.qa.home");
             },
             controller: function($scope, $rootScope) {
-                $rootScope.hasError = true;
+                $rootScope.hasError = false;
                 $rootScope.stateName = "main.shield.qa.home";
                 $rootScope.status = !$rootScope.hasError;
                 $rootScope.moduleName = "qa";
-                $rootScope.url = "/qa/home"; 
+                $rootScope.url = "/qa/home";
                 console.log('qa + home');
             }
     })

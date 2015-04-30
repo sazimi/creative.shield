@@ -2,7 +2,7 @@
 /// <reference path="helleServices.ts" />
 
 module Helle {
-    export var helle = angular.module('frontend.helle', []);
+    export var helle = angular.module('frontend.helle', ['booooo']);
 
     // helle's factories
     helle.factory('helleServices', frontend.helle.services.helleServices);
